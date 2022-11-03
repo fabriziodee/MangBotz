@@ -538,7 +538,7 @@ throw e
 }
 handler.help = ['menu', 'help', '?']
 handler.tags = ['main']
-handler.command = /^(m|\?)$/i
+handler.command = /^(tesm|\?)$/i
 
 handler.register = true
 handler.exp = 3
