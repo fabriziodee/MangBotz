@@ -10,30 +10,15 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 //------- NOMOR
  const pp = fs.readFileSync('./media/own.jpg')
   let nowner1 = `${nomorown1.split`@`[0]}@s.whatsapp.net`
-  let nowner2 = `${nomorown2.split`@`[0]}@s.whatsapp.net`
 let teksnomor = (
 `╳ ── ◸ *Mʏ Oᴡɴᴇʀ* ◹ ── ╳
 ⟣⟮ *${nameown1}* ⟯⟢
 ⟬ @${nomorown1.split`@`[0]} ⟭
-┆
-⟣⟮ *${nameown2}* ⟯⟢
-⟬ @${nomorown2.split`@`[0]} ⟭
 ┆`
 )
 //------------ BIO
 let ppown = await conn.profilePictureUrl(nomorown1 + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1])
 let teksbio = `┆⫹⫺ 💌 Nama : MangDTech
-┆⫹⫺ ✉️ Nama RL : MangDTech
-┆⫹⫺ ♂️ Gender : Pria
-┆⫹⫺ ⏰ Tanggal lahir : 24 - 02 - 2003
-┆⫹⫺ 🎨 Umur : 19
-┆⫹⫺ 🧩 Hobby : 𝙼𝚘𝚍𝚒𝚏𝚒𝚔𝚊𝚜𝚒 𝚙𝚎𝚛𝚊𝚗𝚐𝚔𝚊𝚝 𝚕𝚞𝚗𝚊𝚔
-┆⫹⫺ 💬 Sifat : ASIK,BAIK,RAMAH
-┆⫹⫺ 🗺️ Tinggal : Indonesia, Sumatera Barat
-└––––––––––––·•
-`
-let ppown2 = await conn.profilePictureUrl(nomorown2 + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1]) 
-let teksbio2 = `┆⫹⫺ 💌 Nama : MangDTech
 ┆⫹⫺ ✉️ Nama RL : MangDTech
 ┆⫹⫺ ♂️ Gender : Pria
 ┆⫹⫺ ⏰ Tanggal lahir : 24 - 02 - 2003
@@ -59,7 +44,6 @@ rows: [
 {title: "⸙ Kontak", rowId: ".owner kontak"},
 {title: "⸙ Nomor", rowId: ".owner nomor"},
 {title: "⸙ Biodata MangDTech", rowId: ".owner bio"},
-{title: "⸙ Biodata MangDTech", rowId: ".owner bio2"},
 ]}, {
 title: `⬔ Sᴜᴘᴘᴏʀᴛ Mᴇ ⬔`,
 rows: [
@@ -107,15 +91,7 @@ await conn.sendMessage(m.chat, { contacts: { displayName: wm, contacts: [{ vcard
                 ['Sewa Bot', `${usedPrefix}sewa`],
                 ['Menu', `${usedPrefix}menu`]
             ], m)
-            break
-                        case 'bio2':
-          //conn.sendHydrated(m.chat, teksbio, wm, ppown, sig, "📷 Instagram", nomorown, '🌹 Nomor', [[null, null], [null, null],[null,null]], m)
-
-          conn.sendButton(m.chat, '┍┈༺ *Biodata MangDTech* ༻', teksbio2, ppown2, [
-                ['Sewa Bot', `${usedPrefix}sewa`],
-                ['Menu', `${usedPrefix}menu`]
-            ], m)
-            break
+            break                      
             
           default:
            return conn.sendMessage(m.chat, listMessage, { quoted: fkontak, mentions: await conn.parseMention(tek), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
