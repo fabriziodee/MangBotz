@@ -80,6 +80,7 @@ const readMore = more.repeat(4001)
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ NO OWNER ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.owner = [
+['6285658019360', 'MangDTech', true], 
 ['6285658019360', 'MangDTech', true]
 ]
 global.mods = []
@@ -96,22 +97,22 @@ global.nomorwa = '0'
 global.readMore = readMore
 global.author = 'MangDTech'
 global.namebot = '​MangBotz'
-global.wm = '© MangBotz Bye MangDTech'
+global.wm = '©MangBotz By MangDTech'
 global.media = 'https://telegra.ph/file/8047b7dfc9cee4c4f98b5.jpg'
-global.wm = 'MangDTech '
+global.wm = 'MangDTech'
 global.watermark = wm
-global.wm2 = 'MangDTech '
+global.wm2 = 'MangDTech'
 global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
 global.bottime = `T I M E : ${wktuwib}`
 global.titlebot = `MangBotz`
 global.stickpack = 'MangBotz'
-global.stickauth = `© MangBotz MD`
+global.stickauth = `©MangBotz`
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ OWNER INFO ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.nameown1= 'MangDTech'
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ MEDIA LINK ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.Linkgc = '-'
+global.Linkgc = 'https://chat.whatsapp.com/H9TCBJM85XwFgU8baLwl5U'
 global.lynk = '-'
 
 
@@ -124,7 +125,7 @@ global.snh = '-'
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ DONASI ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.pdana = '0895 0663 1616'
-global.povo = '-'
+global.povo = '0895 0663 1616'
 global.pgopay = '0895 0663 1616'
 global.plinkaja = '-' //link aja
 global.ppulsa = '0895 0663 1616'
