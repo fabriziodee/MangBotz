@@ -10,9 +10,9 @@ let thumb = await(await fetch(wibu)).buffer()
 user.afk = + new Date
 user.afkReason = text
  conn.sendButtonDoc(m.chat, `${conn.getName(m.sender)} Sᴇᴅᴀɴɢ Aғᴋ Dᴇɴɢᴀɴ Aʟᴀsᴀɴ ⬋`, `⬕ ${text ? ': ' + text : ''}` , 'Jangan Ganggu Ya', 'huuuuu', m,  { contextInfo: { externalAdReply: { showAdAttribution: true,
-        mediaUrl: "https://facebook.com/sadtime098",
+        mediaUrl: "https://youtube.com/c/KomangComics",
         mediaType: "VIDEO",
-        description: "https://facebook.com/sadtime098",
+        description: "https://youtube.com/c/KomangComics",
         title: 'Simple Bot Esm',
         body: wm,
         thumbnail: thumb,

@@ -10,15 +10,14 @@ let text = `
 │ • *Dana:* [${global.pdana}]
 ❏────
 `
-const templateButtons = [   
-    {index: 1, urlButton: {displayText: '🌎 Official Group', url: sgc}},
-    {index: 2, quickReplyButton: {displayText: 'Menu', id: '.menu'}},
-    {index: 3, quickReplyButton: {displayText: 'Owner', id: '.owner'}},
+const sections = [      
+    {title: "Menu", rowId: '.menu'}},
+    {title: "Owner", rowId: '.owner'}},
 ]
 let tm = {
 text: text,
 footer: global.wm,
-templateButtons: templateButtons,
+sections: sections,
 image: {url: fla + 'Donasi'}
 }
 conn.sendMessage(m.chat, tm, m)
