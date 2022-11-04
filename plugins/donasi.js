@@ -10,15 +10,8 @@ let text = `
 │ • *Dana:* [${global.pdana}]
 ❏────
 `
-const sections = [      
-    {title: "Menu", rowId: '.menu'}},
-    {title: "Owner", rowId: '.owner'}},
-]
 let tm = {
-text: text,
-footer: global.wm,
-sections: sections,
-image: {url: fla + 'Donasi'}
+text: text}
 }
 conn.sendMessage(m.chat, tm, m)
 }
