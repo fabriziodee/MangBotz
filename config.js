@@ -111,6 +111,7 @@ global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ OWNER INFO ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.nameown1= 'MangDTech'
+global.nameown2= 'MangDTech'
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ MEDIA LINK ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.Linkgc = 'https://chat.whatsapp.com/H9TCBJM85XwFgU8baLwl5U'
 global.lynk = '-'
