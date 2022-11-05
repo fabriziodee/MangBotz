@@ -80,7 +80,6 @@ export async function handler(chatUpdate) {
                     user.role = 'Beginner'
                 if (!('autolevelup' in user))
                     user.autolevelup = true
-
                 if (!isNumber(user.money))
                     user.money = 0
                 if (!isNumber(user.atm))
@@ -103,7 +102,6 @@ export async function handler(chatUpdate) {
                     user.string = 0
                 if (!isNumber(user.petFood))
                     user.petFood = 0
-
                 if (!isNumber(user.emerald))
                     user.emerald = 0
                 if (!isNumber(user.diamond))
@@ -114,7 +112,6 @@ export async function handler(chatUpdate) {
                     user.iron = 0
                 if (!isNumber(user.upgrader))
                     user.upgrader = 0
-
                 if (!isNumber(user.common))
                     user.common = 0
                 if (!isNumber(user.uncommon))
@@ -127,7 +124,6 @@ export async function handler(chatUpdate) {
                     user.superior = 0
                 if (!isNumber(user.pet))
                     user.pet = 0
-
                 if (!isNumber(user.horse))
                     user.horse = 0
                 if (!isNumber(user.horseexp))
@@ -148,7 +144,6 @@ export async function handler(chatUpdate) {
                     user.robo = 0
                 if (!isNumber(user.roboxp))
                     user.roboxp = 0
-
                 if (!isNumber(user.horselastfeed))
                     user.horselastfeed = 0
                 if (!isNumber(user.catlastfeed))
@@ -157,7 +152,6 @@ export async function handler(chatUpdate) {
                     user.foxlastfeed = 0
                 if (!isNumber(user.doglastfeed))
                     user.doglastfeed = 0
-
                 if (!isNumber(user.armor))
                     user.armor = 0
                 if (!isNumber(user.armordurability))
@@ -174,7 +168,6 @@ export async function handler(chatUpdate) {
                     user.fishingrod = 0
                 if (!isNumber(user.fishingroddurability))
                     user.fishingroddurability = 0
-
                 if (!isNumber(user.lastclaim))
                     user.lastclaim = 0
                 if (!isNumber(user.lastadventure))
@@ -196,8 +189,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.lastbunga))
                     user.lastbunga = 0
                 if (!isNumber(user.note))
-                    user.note = 0
-                    
+                    user.note = 0                   
                 if (!isNumber(user.premium))
                     user.premium = false
                 if (!isNumber(user.premiumTime))
@@ -231,20 +223,17 @@ export async function handler(chatUpdate) {
                     wood: 0,
                     rock: 0,
                     string: 0,
-
                     emerald: 0,
                     diamond: 0,
                     gold: 0,
                     iron: 0,
                     upgrader: 0,
-
                     common: 0,
                     uncommon: 0,
                     mythic: 0,
                     legendary: 0,
                     superior: 0,
                     pet: 0,
-
                     horse: 0,
                     horseexp: 0,
                     cat: 0,
@@ -253,12 +242,10 @@ export async function handler(chatUpdate) {
                     foxexp: 0,
                     dog: 0,
                     dogexp: 0,
-
                     horselastfeed: 0,
                     catlastfeed: 0,
                     foxlastfeed: 0,
                     doglastfeed: 0,
-
                     armor: 0,
                     armordurability: 0,
                     sword: 0,
@@ -267,7 +254,6 @@ export async function handler(chatUpdate) {
                     pickaxedurability: 0,
                     fishingrod: 0,
                     fishingroddurability: 0,
-
                     lastclaim: 0,
                     lastadventure: 0,
                     lastfishing: 0,
@@ -278,8 +264,7 @@ export async function handler(chatUpdate) {
                     lastweekly: 0,
                     lastmonthly: 0,
                     lastbunga: 0,
-                    note: 0,
-                    
+                    note: 0,                  
                     premium: false,
                     premiumTime: 0,
                     limitjoin: 0,
