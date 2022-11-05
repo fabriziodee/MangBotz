@@ -301,6 +301,10 @@ export async function handler(chatUpdate) {
                     chat.nsfw = false
                 if (!('premnsfw' in chat))
                     chat.premnsfw = false
+                if (!('premium' in chat)) 
+                    chat.premium = false
+                if (!('premiumTime' in chat))
+                    chat.premiumTime = false
                 if (!isNumber(chat.expired))
                     chat.expired = 0
             } else
@@ -317,6 +321,8 @@ export async function handler(chatUpdate) {
                     viewonce: false,
                     antiBadword: true,
                     simi: false,
+                    premium: false, 
+                    premiumTime: false, 
                     expired: 0,
                     nsfw: false,
                     premnsfw: false,
