@@ -5,7 +5,7 @@ let handler = async (m, { conn, args, usedPrefix, command, text }) => {
     if (!args[0]) throw `contoh:\n ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
     let res = (await axios.get(API('https://malesin.xyz', '/tiktok2', { url: args[0] } ))).data;
     if (res.status != 200) throw res.message;
-    if (!kos) throw kos.message;
+    if (!res) throw res.message;
     /*let res = (await axios.get(API('https://malesin.xyz', '/tiktok', { url: args[0] } ))).data;
     if (res.status != 200) throw res.message;
     if (!res) throw res.message;*/
