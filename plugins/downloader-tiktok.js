@@ -14,7 +14,7 @@ let handler = async (m, { conn, args, usedPrefix, command, text }) => {
     let fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': `${name}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg'), thumbnail: fs.readFileSync('./thumbnail.jpg'),sendEphemeral: true}}}
    await conn.sendFile(m.chat, `
 *Username:* ${res.author}
-*Judul:* ${res.title}`, wm, await (await fetch(res.video)).buffer(), [[`Audio`, usedPrefix + `ta ${text}`]], fkontak)
+*Judul:* ${res.title}`, wm, await (await fetch(res.video)).buffer(), [[`Audio`, fkontak)
 } catch { m.reply('terjadi kesalahan') }
 }
     
