@@ -109,11 +109,13 @@ global.lynk = '-'
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ MEDIA SOSSIAL ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.sig = '-'
+global.sig = 'https://instagram.com'
 global.sgh = 'https://github.com/MangDTech' //github
 global.sgc = 'https://chat.whatsapp.com/H9TCBJM85XwFgU8baLwl5U' //group whatsapp
-global.sdc = '-' //discord
-global.snh = '-'
+global.sdc = 'https://discord.com' //discord
+global.snh = 'https://tiktok.com'
+global.sfb = 'https://facebook.com'
+global.syt = 'https://youtube.com/c/KomangComics'
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ DONASI ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.pdana = '0895 0663 1616'
