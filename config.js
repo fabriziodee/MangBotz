@@ -90,6 +90,7 @@ global.author = 'MangDTech'
 global.namebot = '​MangBotz'
 global.wm = '©MangBotz By MangDTech'
 global.media = 'https://telegra.ph/file/8047b7dfc9cee4c4f98b5.jpg'
+global.logo = 'https://telegra.ph/file/8047b7dfc9cee4c4f98b5.jpg'
 global.wm = 'MangDTech'
 global.watermark = wm
 global.wm2 = 'MangDTech'
