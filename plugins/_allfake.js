@@ -53,10 +53,10 @@ handler.all = async function (m) {
 		}
 		global.fakeig = {
          contextInfo: { externalAdReply: { showAdAttribution: true,
-            mediaUrl: "https://Instagram.com",
+            mediaUrl: sgc,
             mediaType: "VIDEO",
-            description: "https://Instagram.com", 
-            title: 'Simple Bot Esm',
+            description: botdate, 
+            title: 'MangBotz',
             body: wm,
             thumbnailUrl: pp,
             sourceUrl: sgc
