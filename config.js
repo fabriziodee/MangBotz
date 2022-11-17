@@ -1,38 +1,3 @@
-/*
-⫰⫯ Note!! Kalo Mau Hapus Ngotak Dulu,Siapa Yg Buat Siapa Yg Kerja Siapa Yang Nyediain Scriptnya
-
-⫹❰⫺ 𝐵𝐼𝐺 𝑇𝐻𝐴𝑁𝐾𝑆 𝑇𝑂 ⫹❱⫺
-⭝ 𝑨𝒍𝒍𝒂𝒉 𝒀𝒂𝒏𝒈 𝑴𝒂𝒉𝒂 𝑬𝒔𝒂
-⭝ 𝑶𝒓𝒂𝒏𝒈 𝑻𝒖𝒂
-⭝ 𝑻𝒆𝒎𝒆𝒏 𝑮𝒘
-⭝ 𝑴𝒂𝒔𝒕𝒂𝒉 𝑴𝒂𝒔𝒕𝒂𝒉
-
-⫹⫺ 𝑇𝒉𝑒 𝑁𝑎𝑚𝑒 𝑇𝒉𝑎𝑡 𝐻𝑒𝑙𝑝𝑒𝑑 𝑀𝑒 ⫹⫺
-⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔⸔
-⭝ 𝑨𝒅𝒊𝒘𝒂𝒋𝒊𝒔𝒉𝒊𝒏𝒈
-⭝ 𝑵𝒂𝒓𝒖𝒕𝒐𝒎𝒐
-⭝ 𝑹𝒊𝒔𝒎𝒂𝑩𝒐𝒕𝒛 𝑶𝒇𝒇𝒄
-⭝ 𝑱𝒂𝒓𝒐𝒕 𝑶𝒇𝒇𝒄
-⭝ 𝑯𝒚𝒛𝒆𝒓
-⭝ 𝑫𝒆𝒇𝒇𝒓𝒊
-⭝ 𝑲𝒂𝒏𝒏𝒂𝑪𝒉𝒂𝒏
-⭝ 𝑪𝒉𝒓𝒊𝒔𝒕𝒊𝒂𝒏 𝑰𝒅
-⭝ 𝑨𝒊𝒏𝒆
-⭝ 𝑨𝒓𝒊𝒇𝒇𝒃
-⭝ 𝑰𝒍𝒎𝒂𝒏
-⭝ 𝑨𝒎𝒊𝒓𝒖𝒍
-⭝ 𝑰𝒔𝒕𝒊𝒌𝒎𝒂𝒍
-⭝ 𝑭𝒛𝒐𝒏𝒆
-⭝ 𝑭𝒂𝑱𝒂𝒓
-⭝ 𝑨𝒓𝒖𝒍𝒍 𝑶𝒇𝒄
-⭝ 𝒁𝒆𝒆𝒐𝒏𝒆 𝑶𝒇𝒄
-⭝ 𝑹𝒂𝒎𝒍𝑎𝑛
-⭝ 𝑮𝒆𝒎𝒑𝒚𝒓𝑻𝒐𝒏
-let nowner1 = `${nomorown1.split`@`[0]}@s.whatsapp.net`
-let teksnomor = `${htki} *OWNER* ${htka}
-✦ @${nomorown1.split`@`[0]} ✦
-*/
-
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
@@ -262,6 +227,7 @@ global.APIs = { // API Prefix
   kanx: 'https://kannxapi.herokuapp.com/', 
   violetics : 'https://violetics.pw',
   ziy : 'https://ziy.herokuapp.com',
+  zekais : 'http://zekais-api.herokuapp.com',
   males : 'https://malesin.xyz'
 }
 
@@ -280,7 +246,8 @@ global.APIKeys = { // APIKey Here
   'https://server-api-rey.herokuapp.com': 'apirey',
   'https://botstyle-api.herokuapp.com': 'Apikeymu',
   'https://hardianto.xyz': 'hardianto',
-  'https://violetics.pw': 'beta',
+  'https://violetics.pw': 'a30a-c5fc-ecc2a30a-c5fc-ecc2',
+  'https://zekais-api.herokuapp.com' : 'Y5DbWcd6',
   'https://ziy.herokuapp.com' : 'xZiyy'
 }
 //⳹ NOTE !! EXAMPLE ➢ 'https://WebsiteApi': 'Apikey'
