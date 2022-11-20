@@ -5,7 +5,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
     conn.tebakanjime = conn.tebakanjime ? conn.tebakanjime : {}
     let id = m.chat
     if (id in conn.tebakanjime) {
-        conn.sendButton(m.chat, 'Masih ada soal belum terjawab di chat ini', author, null, buttons, conn.tebakanjime[id][0])
+        conn.sendButton(m.chat, 'Masih ada soal belum terjawab di chat ini', author, buttons, conn.tebakanjime[id][0])
         throw false
     }
     let res = await fetch(`http://zekais-api.herokuapp.com/tebakanime`)
@@ -21,7 +21,7 @@ Bonus: ${poin} XP
         await conn.sendButton(m.chat, caption, author, json.image, buttons, m),
         json, poin,
         setTimeout(() => {
-            if (conn.tebakanjime[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.name}*\n*Desk:* ${json.desc}`, author, null, [
+            if (conn.tebakanjime[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.name}*\n*Desk:* ${json.desc}`, author, [
                 ['tebakanime', '/tebakanime']
             ], conn.tebakanjime[id][0])
             delete conn.tebakanjime[id]
