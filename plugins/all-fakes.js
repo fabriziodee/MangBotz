@@ -263,7 +263,7 @@ let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid :
 		// Global Fake
 		global.doc = _pdoc
 		global.fakes = _pft
-		global.knimg = _kn
+		//global.knimg = _kn
 		global.tumhiho = _situm
 		
 	// Ends
