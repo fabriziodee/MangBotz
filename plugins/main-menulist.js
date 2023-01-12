@@ -46,7 +46,7 @@ let tags
 let emot = `${pickRandom(['⎔', '◈▻', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
 let rndom = `${pickRandom(['defaultMenu', 'defmenu1'])}`
 let teks = `${args[0]}`.toLowerCase()
-let arrayMenu = ['all', 'anime', 'update', 'maker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database","quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
+let arrayMenu = ['all', 'anime', 'update', 'maker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database","quran', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
 if (!arrayMenu.includes(teks)) teks = '404'
 if (teks == 'all') tags = {
 'main': 'Main',
@@ -60,8 +60,6 @@ if (teks == 'all') tags = {
 'anime': 'Anime',
 'admin': 'Admin',
 'group': 'Group',
-'vote': 'Voting',
-'absen': 'Absen',
 'premium': 'Premium',
 'anonymous': 'Anonymous Chat',
 'internet': 'Internet',
@@ -146,12 +144,6 @@ if (teks == 'fun') tags = {
 }
 if (teks == 'database') tags = {
 'database': 'Database'
-}
-if (teks == 'vote') tags = {
-'vote': 'Voting',
-}
-if (teks == 'absen') tags = {
-'absen': 'Absen'
 }
 if (teks == 'quran') tags = {
 'quran': 'Al-Qur\'an',
