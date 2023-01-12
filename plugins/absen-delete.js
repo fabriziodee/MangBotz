@@ -1,16 +1,15 @@
-let handler = async (m, { conn, usedPrefix, isAdmin, isOwner }) => {
-    if (m.isGroup) {
-        if (!(isAdmin || isOwner)) return dfail('admin', m, conn)
-    }
-    let id = [m.sender]
+let handler = async (m, { usedPrefix }) => {
+    let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
-    if (!(id in conn.absen)) return conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, 'Frieren', ['Mulai', `${usedPrefix}+absen`], m)
+    if (!(id in conn.absen)) await conn.sendButton(m.chat, `_*Tidak ada absen berlangsung digrup ini!*_\n\n*${usedPrefix}mulaiabsen* - untuk memulai absen`, author, null, [
+                ['mulaiabsen', `${usedPrefix}mulaiabsen`]
+            ], m)
     delete conn.absen[id]
-    m.reply(`Absen berhasil dihapus`)
+    m.reply(`Done!`)
 }
 handler.help = ['hapusabsen']
 handler.tags = ['absen']
+handler.command = /^(delete|hapus)absen$/i
 handler.group = true
-handler.command = /^(delete|hapus|-)absen$/i
-
+handler.admin = true
 export default handler
