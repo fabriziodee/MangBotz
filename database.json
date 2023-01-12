@@ -1,7 +1,7 @@
 {
   "users": {
     "6285658019360@s.whatsapp.net": {
-      "exp": 5222,
+      "exp": 5426,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -76,7 +76,7 @@
       "roboxp": 0
     },
     "6285776777438@s.whatsapp.net": {
-      "exp": 775,
+      "exp": 786,
       "limit": 99,
       "lastclaim": 0,
       "registered": true,
@@ -151,7 +151,7 @@
       "roboxp": 0
     },
     "6283181132405@s.whatsapp.net": {
-      "exp": 227,
+      "exp": 252,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -1577,7 +1577,7 @@
       "roboxp": 0
     },
     "6283867367309@s.whatsapp.net": {
-      "exp": 237,
+      "exp": 238,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -1652,7 +1652,7 @@
       "roboxp": 0
     },
     "6287855392756@s.whatsapp.net": {
-      "exp": 84,
+      "exp": 92,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -2027,7 +2027,7 @@
       "roboxp": 0
     },
     "6287869565577@s.whatsapp.net": {
-      "exp": 557,
+      "exp": 565,
       "limit": 98,
       "lastclaim": 0,
       "registered": true,
@@ -2627,7 +2627,7 @@
       "roboxp": 0
     },
     "6282386449117@s.whatsapp.net": {
-      "exp": 644,
+      "exp": 669,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -3974,7 +3974,7 @@
       "roboxp": 0
     },
     "6289623108330@s.whatsapp.net": {
-      "exp": 617,
+      "exp": 622,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -4199,7 +4199,7 @@
       "roboxp": 0
     },
     "6281258611038@s.whatsapp.net": {
-      "exp": 78,
+      "exp": 84,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -6737,7 +6737,7 @@
       "roboxp": 0
     },
     "6281389736687@s.whatsapp.net": {
-      "exp": 33,
+      "exp": 39,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -7333,7 +7333,7 @@
       "roboxp": 0
     },
     "6285861275749@s.whatsapp.net": {
-      "exp": 66,
+      "exp": 75,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -8604,7 +8604,7 @@
       "roboxp": 0
     },
     "6282138733405@s.whatsapp.net": {
-      "exp": 29,
+      "exp": 32,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -9950,7 +9950,7 @@
       "roboxp": 0
     },
     "6283138404802@s.whatsapp.net": {
-      "exp": 70,
+      "exp": 202,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -10325,7 +10325,7 @@
       "roboxp": 0
     },
     "6283162012544@s.whatsapp.net": {
-      "exp": 35,
+      "exp": 44,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -12046,7 +12046,7 @@
       "roboxp": 0
     },
     "6281293826686@s.whatsapp.net": {
-      "exp": 352,
+      "exp": 354,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -12867,7 +12867,7 @@
       "roboxp": 0
     },
     "6282349758221@s.whatsapp.net": {
-      "exp": 16,
+      "exp": 29,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -14939,7 +14939,7 @@
       "roboxp": 0
     },
     "628977928795@s.whatsapp.net": {
-      "exp": 39,
+      "exp": 48,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -16573,7 +16573,7 @@
       "roboxp": 0
     },
     "6285855071706@s.whatsapp.net": {
-      "exp": 64,
+      "exp": 77,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -16790,7 +16790,7 @@
       "limitjoin": 0
     },
     "6283108647462@s.whatsapp.net": {
-      "exp": 20,
+      "exp": 23,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -18420,7 +18420,7 @@
       "roboxp": 0
     },
     "6285705510152@s.whatsapp.net": {
-      "exp": 177,
+      "exp": 217,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -25186,6 +25186,231 @@
       "premium": false,
       "premiumTime": 0,
       "limitjoin": 0
+    },
+    "6283184197709@s.whatsapp.net": {
+      "exp": 25,
+      "limit": 100,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "~Atmi",
+      "pasangan": "",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Beginner",
+      "autolevelup": true,
+      "money": 0,
+      "bank": 0,
+      "atm": 0,
+      "fullatm": 0,
+      "health": 100,
+      "potion": 10,
+      "trash": 0,
+      "wood": 0,
+      "rock": 0,
+      "string": 0,
+      "emerald": 0,
+      "diamond": 0,
+      "gold": 0,
+      "iron": 0,
+      "upgrader": 0,
+      "common": 0,
+      "uncommon": 0,
+      "mythic": 0,
+      "legendary": 0,
+      "superior": 0,
+      "pet": 0,
+      "horse": 0,
+      "horseexp": 0,
+      "cat": 0,
+      "catngexp": 0,
+      "fox": 0,
+      "foxexp": 0,
+      "dog": 0,
+      "dogexp": 0,
+      "horselastfeed": 0,
+      "catlastfeed": 0,
+      "foxlastfeed": 0,
+      "doglastfeed": 0,
+      "armor": 0,
+      "armordurability": 0,
+      "sword": 0,
+      "sworddurability": 0,
+      "pickaxe": 0,
+      "pickaxedurability": 0,
+      "fishingrod": 0,
+      "fishingroddurability": 0,
+      "lastadventure": 0,
+      "lastfishing": 0,
+      "lastdungeon": 0,
+      "lastduel": 0,
+      "lastmining": 0,
+      "lasthunt": 0,
+      "lastweekly": 0,
+      "lastmonthly": 0,
+      "lastbunga": 0,
+      "note": 0,
+      "premium": false,
+      "premiumTime": 0,
+      "limitjoin": 0,
+      "petFood": 0,
+      "catexp": 0,
+      "robo": 0,
+      "roboxp": 0
+    },
+    "62895404173385@s.whatsapp.net": {
+      "exp": 12,
+      "limit": 100,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "Syifa",
+      "pasangan": "",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Beginner",
+      "autolevelup": true,
+      "money": 0,
+      "bank": 0,
+      "atm": 0,
+      "fullatm": 0,
+      "health": 100,
+      "potion": 10,
+      "trash": 0,
+      "wood": 0,
+      "rock": 0,
+      "string": 0,
+      "emerald": 0,
+      "diamond": 0,
+      "gold": 0,
+      "iron": 0,
+      "upgrader": 0,
+      "common": 0,
+      "uncommon": 0,
+      "mythic": 0,
+      "legendary": 0,
+      "superior": 0,
+      "pet": 0,
+      "horse": 0,
+      "horseexp": 0,
+      "cat": 0,
+      "catngexp": 0,
+      "fox": 0,
+      "foxexp": 0,
+      "dog": 0,
+      "dogexp": 0,
+      "horselastfeed": 0,
+      "catlastfeed": 0,
+      "foxlastfeed": 0,
+      "doglastfeed": 0,
+      "armor": 0,
+      "armordurability": 0,
+      "sword": 0,
+      "sworddurability": 0,
+      "pickaxe": 0,
+      "pickaxedurability": 0,
+      "fishingrod": 0,
+      "fishingroddurability": 0,
+      "lastadventure": 0,
+      "lastfishing": 0,
+      "lastdungeon": 0,
+      "lastduel": 0,
+      "lastmining": 0,
+      "lasthunt": 0,
+      "lastweekly": 0,
+      "lastmonthly": 0,
+      "lastbunga": 0,
+      "note": 0,
+      "premium": false,
+      "premiumTime": 0,
+      "limitjoin": 0,
+      "petFood": 0,
+      "catexp": 0,
+      "robo": 0,
+      "roboxp": 0
+    },
+    "62857017312300@s.whatsapp.net": {
+      "exp": 0,
+      "limit": 100,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "BOT GAJE",
+      "pasangan": "",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Beginner",
+      "autolevelup": true,
+      "money": 0,
+      "bank": 0,
+      "atm": 0,
+      "fullatm": 0,
+      "health": 100,
+      "potion": 10,
+      "trash": 0,
+      "wood": 0,
+      "rock": 0,
+      "string": 0,
+      "emerald": 0,
+      "diamond": 0,
+      "gold": 0,
+      "iron": 0,
+      "upgrader": 0,
+      "common": 0,
+      "uncommon": 0,
+      "mythic": 0,
+      "legendary": 0,
+      "superior": 0,
+      "pet": 0,
+      "horse": 0,
+      "horseexp": 0,
+      "cat": 0,
+      "catngexp": 0,
+      "fox": 0,
+      "foxexp": 0,
+      "dog": 0,
+      "dogexp": 0,
+      "horselastfeed": 0,
+      "catlastfeed": 0,
+      "foxlastfeed": 0,
+      "doglastfeed": 0,
+      "armor": 0,
+      "armordurability": 0,
+      "sword": 0,
+      "sworddurability": 0,
+      "pickaxe": 0,
+      "pickaxedurability": 0,
+      "fishingrod": 0,
+      "fishingroddurability": 0,
+      "lastadventure": 0,
+      "lastfishing": 0,
+      "lastdungeon": 0,
+      "lastduel": 0,
+      "lastmining": 0,
+      "lasthunt": 0,
+      "lastweekly": 0,
+      "lastmonthly": 0,
+      "lastbunga": 0,
+      "note": 0,
+      "premium": false,
+      "premiumTime": 0,
+      "limitjoin": 0,
+      "petFood": 0,
+      "catexp": 0,
+      "robo": 0,
+      "roboxp": 0
     }
   },
   "chats": {
@@ -26469,10 +26694,10 @@
   },
   "stats": {
     "main-menuawal.js": {
-      "total": 128,
-      "success": 128,
-      "last": 1668942638585,
-      "lastSuccess": 1668942638585
+      "total": 129,
+      "success": 129,
+      "last": 1673509769286,
+      "lastSuccess": 1673509769286
     },
     "exp-daftar.js": {
       "total": 89,
@@ -26541,10 +26766,10 @@
       "lastSuccess": 1667446765930
     },
     "tes123.js": {
-      "total": 73,
-      "success": 73,
-      "last": 1668944924555,
-      "lastSuccess": 1668944924555
+      "total": 76,
+      "success": 76,
+      "last": 1673511469839,
+      "lastSuccess": 1673511469839
     },
     "downloader-facebook.js": {
       "total": 2,
@@ -26589,10 +26814,10 @@
       "lastSuccess": 1668503729728
     },
     "owner-getdb.js": {
-      "total": 8,
-      "success": 8,
-      "last": 1668439844964,
-      "lastSuccess": 1668439844964
+      "total": 9,
+      "success": 9,
+      "last": 1673509781395,
+      "lastSuccess": 1673509781395
     },
     "intro.js": {
       "total": 10,
@@ -26607,10 +26832,10 @@
       "lastSuccess": 1668934898863
     },
     "sticker-sticker.js": {
-      "total": 177,
-      "success": 170,
-      "last": 1668925336061,
-      "lastSuccess": 1668925336061
+      "total": 178,
+      "success": 171,
+      "last": 1673510016980,
+      "lastSuccess": 1673510016980
     },
     "enable.js": {
       "total": 4,
@@ -26625,10 +26850,10 @@
       "lastSuccess": 1667540396510
     },
     "Ao-Ling ID.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1667540948461,
-      "lastSuccess": 1667540948461
+      "total": 3,
+      "success": 3,
+      "last": 1673509829156,
+      "lastSuccess": 1673509829156
     },
     "youtube-yta.js": {
       "total": 34,
@@ -27303,10 +27528,10 @@
       "lastSuccess": 1668437251604
     },
     "owner-getsesi.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1668439850309,
-      "lastSuccess": 1668439850309
+      "total": 3,
+      "success": 3,
+      "last": 1673509789992,
+      "lastSuccess": 1673509789992
     },
     "owner-banuser.js": {
       "total": 2,
@@ -27367,6 +27592,12 @@
       "success": 2,
       "last": 1668942747523,
       "lastSuccess": 1668942747523
+    },
+    "Ao-Tnt.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673509877986,
+      "lastSuccess": 1673509877986
     }
   },
   "msgs": {},
