@@ -2,7 +2,7 @@
 import fs from 'fs'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
-import knights from 'knights-canvas'
+//import knights from 'knights-canvas'
 export async function before(m, { conn }) {
 let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net'
 	let name = await conn.getName(who)
@@ -14,17 +14,7 @@ let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid :
     let _situm = await conn.resize(thumbnailUrl.getRandom(), 300, 150)
     let sipp = await conn.resize(pp, 150, 150)
     
-    // Fake Knights
-		let imagea = await new knights.Jo().setImage(pp).toBuild();
-		let dataa = imagea.toBuffer();
-		let imageb = await new knights.Patrick().setAvatar(pp).toAttachment();
-		let datab = imageb.toBuffer();
-		let imagec = await new knights.Bonk().setAvatar1(pp).setAvatar2(pp).toBuild();
-		let datac = imagec.toBuffer();
-		let imaged = await new knights.Burn().setAvatar(pp).toAttachment();
-		let datad = imaged.toBuffer();
-		let _kn = [dataa, datab, datac, datad].getRandom()
-
+    // Fake Knights		 
 	// Begin
 		global.ucapan = ucapkan()
 		global.ephemeral = '86400'
