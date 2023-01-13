@@ -5,7 +5,6 @@ import moment from 'moment-timezone'
 import os from 'os'
 import fs from 'fs'
 import fetch from 'node-fetch'
-
 const defaultMenu = {
 before: ` `.trimStart(),
 header: '⃟⃟☰⃟⃟ᭁ═━┈━┈༓ *%category* ',
@@ -18,7 +17,7 @@ let tags
 let emot = `${pickRandom(['⎔', '◈▻', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
 let rndom = `${pickRandom(['defaultMenu', 'defmenu1'])}`
 let teks = `${args[0]}`.toLowerCase()
-let arrayMenu = ['all', 'anime', 'update', 'maker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
+let arrayMenu = ['all', 'anime', 'update', 'maker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database","quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
 if (!arrayMenu.includes(teks)) teks = '404'
 if (teks == 'all') tags = {
 'main': 'Main',
@@ -32,6 +31,8 @@ if (teks == 'all') tags = {
 'anime': 'Anime',
 'admin': 'Admin',
 'group': 'Group',
+'vote': 'Voting',
+'absen': 'Absen',
 'premium': 'Premium',
 'anonymous': 'Anonymous Chat',
 'internet': 'Internet',
@@ -116,6 +117,12 @@ if (teks == 'fun') tags = {
 }
 if (teks == 'database') tags = {
 'database': 'Database'
+}
+if (teks == 'vote') tags = {
+'vote': 'Voting',
+}
+if (teks == 'absen') tags = {
+'absen': 'Absen'
 }
 if (teks == 'quran') tags = {
 'quran': 'Al-Qur\'an',
@@ -275,10 +282,6 @@ let ucpn = `${ucapan()}`
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let d = new Date(new Date + 3600000)
 let locale = 'id'
-// d.getTimeZoneOffset()
-// Offset -420 is 18.00
-// Offset0 is0.00
-// Offset420 is7.00
 let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let date = d.toLocaleDateString(locale, {
@@ -411,10 +414,14 @@ message: {
 }
  }
 let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
 
 //------------------ DOCUMENT
 const _0xcdd4a4=_0x4f24;(function(_0x2bcefa,_0x4d88ce){const _0x5c4dba=_0x4f24,_0x205702=_0x2bcefa();while(!![]){try{const _0x33e7d8=-parseInt(_0x5c4dba(0x19c))/0x1+parseInt(_0x5c4dba(0x1a4))/0x2+-parseInt(_0x5c4dba(0x196))/0x3*(parseInt(_0x5c4dba(0x190))/0x4)+parseInt(_0x5c4dba(0x19e))/0x5+parseInt(_0x5c4dba(0x1a1))/0x6+-parseInt(_0x5c4dba(0x18f))/0x7+-parseInt(_0x5c4dba(0x18e))/0x8*(-parseInt(_0x5c4dba(0x19a))/0x9);if(_0x33e7d8===_0x4d88ce)break;else _0x205702['push'](_0x205702['shift']());}catch(_0xf8bf85){_0x205702['push'](_0x205702['shift']());}}}(_0x428b,0x217e1));function _0x4f24(_0xa43523,_0x129aaa){const _0x428b53=_0x428b();return _0x4f24=function(_0x4f24c5,_0x1efd25){_0x4f24c5=_0x4f24c5-0x188;let _0x40aa2e=_0x428b53[_0x4f24c5];return _0x40aa2e;},_0x4f24(_0xa43523,_0x129aaa);}let almenu=_0xcdd4a4(0x1a9)+global['namebot']+_0xcdd4a4(0x1ab)+mode+_0xcdd4a4(0x1aa)+platform+'\x0a┇┃\x20➯\x20*Tʏᴘᴇ:*\x20Node.Js\x0a┃║\x20➯\x20*Bᴀɪʟᴇʏs:*\x20Multi\x20Device\x0a┇┃\x20➯\x20*Pʀᴇғɪx:*\x20[\x20*'+_p+_0xcdd4a4(0x19f)+muptime+'\x0a┇┃\x20➯\x20*Dᴀᴛᴀʙᴀsᴇ:*\x20'+rtotalreg+_0xcdd4a4(0x1ad)+totalreg+_0xcdd4a4(0x18b)+name+_0xcdd4a4(0x19d)+tag+_0xcdd4a4(0x1a6)+prems+_0xcdd4a4(0x18c)+money+_0xcdd4a4(0x193)+limit+_0xcdd4a4(0x188)+level+_0xcdd4a4(0x1ae)+exp+_0xcdd4a4(0x1a5)+role+_0xcdd4a4(0x192)+readMore,nomorwa='0',nomorowm1=_0xcdd4a4(0x18d),d1=_0xcdd4a4(0x197),d2='application/vnd.openxmlformats-officedocument.wordprocessingml.document',d3='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',d4=_0xcdd4a4(0x199),d5=_0xcdd4a4(0x1a7),td=''+pickRandom([d1,d2,d3,d4,d5]),ᴛᴇs='Pᴏᴡᴇʀ\x20Bʏ\x20⬝\x20@'+nomorwa[_0xcdd4a4(0x1a8)]`@`[0x0]+_0xcdd4a4(0x189)+nomorown1[_0xcdd4a4(0x1a8)]`@`[0x0]+_0xcdd4a4(0x1a2)+week+'\x20'+date+_0xcdd4a4(0x1a3)+wktuwib,thummb=fs[_0xcdd4a4(0x18a)](_0xcdd4a4(0x195)),menuunya=_0xcdd4a4(0x194);function _0x428b(){const _0xbcaee4=['Oᴡɴᴇʀ','\x0a└──┈┈⟢\x0a','\x0a┆𝙻𝚒𝚖𝚒𝚝\x20:\x20','halo','./media/dash.jpg','90183FRcCVL','application/vnd.openxmlformats-officedocument.presentationml.presentation','\x0aHayo\x20Ngapain','application/pdf','315lplKwu','.owner','213337iqdLzF','\x0a┆Tᴀɢ\x20:\x20','700670GwRSVE','*\x20]\x0a┃║\x20➯\x20*Uᴘᴛɪᴍᴇ:*\x20','huuu','1041330sEhSga','\x0a⫹⫺\x20DATE:\x20','\x0a⫹⫺\x20𝗧𝗶𝗺𝗲:\x20','33032nQbsHg','\x0a┆𝚁𝚘𝚕𝚎\x20\x20\x20:\x20','\x0a┆Sᴛᴀᴛᴜs\x20:\x20','text/rtf','split','⃟☰⃟⃟ᭁ═━┈༓\x20❲\x20*Iɴғᴏ\x20Bᴏᴛ*\x20❳\x0a┃╔━─⟢⟨\x20','\x0a┃║\x20➯\x20*Pʟᴀᴛғᴏʀᴍ:*\x20','\x20⟩⟣\x0a┇┃\x20➯\x20*Oᴡɴᴇʀ:*\x20MangDTech\x0a┃║\x20➯\x20*Pʀᴏᴊᴇᴄᴛ:*\x202\x20November\x202022\x0a┇┃\x20➯\x20*Mᴏᴅᴇ:*\x20','send3ButtonLoc','\x20dari\x20','\x0a┆𝙴𝚡𝚙\x20\x20\x20:\x20','\x0a┆𝙻𝚎𝚟𝚎𝚕\x20:\x20','\x0aCʀᴇᴀᴛᴏʀ\x20Bᴏᴛ\x20⬝\x20@','readFileSync','\x0a┃❏\x0a┗┳━━◩\x0a┍┛\x0a┆➯📝Youtube\x20:\x20https://youtube.com/c/KomangComics\x0a└─┈⟅\x0a┍━─┈❏➢\x20*Pʀᴏғɪʟᴇ*\x0a┆𝙽𝚊𝚖𝚎\x20:\x20','\x0a┆Mᴏɴᴇʏ\x20:\x20','6285658019360','12272ASXMpa','23184uOucBR','4hHdPhr'];_0x428b=function(){return _0xbcaee4;};return _0x428b();}conn[_0xcdd4a4(0x1ac)](m['chat'],thummb,almenu,readMore+text+(''+ᴛᴇs)+readMore,'SᴇᴡᴀBᴏᴛ','.sewa',_0xcdd4a4(0x191),_0xcdd4a4(0x19b),_0xcdd4a4(0x198),_0xcdd4a4(0x1a0),m);
+
+//------------------- BUTTON VID
+/*conn.sendButton(m.chat, text, wm, 'https://youtu.be/3ONnszQtwz0', [['Ping', '.speed'],['Owner', '.owner'],['Donasi', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: sig, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})*/
 
 } catch (e) {
 conn.reply(m.chat, 'Maaf, menu sedang error', m)
