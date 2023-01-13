@@ -1,7 +1,7 @@
 {
   "users": {
     "6285658019360@s.whatsapp.net": {
-      "exp": 6927,
+      "exp": 7006,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -2627,7 +2627,7 @@
       "roboxp": 0
     },
     "6282386449117@s.whatsapp.net": {
-      "exp": 678,
+      "exp": 683,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -10633,7 +10633,7 @@
       "roboxp": 0
     },
     "6283867133843@s.whatsapp.net": {
-      "exp": 43,
+      "exp": 46,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -30069,10 +30069,10 @@
       "lastSuccess": 1673529300414
     },
     "main-menulist.js": {
-      "total": 154,
-      "success": 154,
-      "last": 1673606203291,
-      "lastSuccess": 1673606203291
+      "total": 155,
+      "success": 155,
+      "last": 1673613531367,
+      "lastSuccess": 1673613531367
     },
     "info-paystore.js": {
       "total": 22,
@@ -30123,10 +30123,10 @@
       "lastSuccess": 1667446765930
     },
     "tes123.js": {
-      "total": 101,
-      "success": 101,
-      "last": 1673604296054,
-      "lastSuccess": 1673604296054
+      "total": 104,
+      "success": 104,
+      "last": 1673613519728,
+      "lastSuccess": 1673613519728
     },
     "downloader-facebook.js": {
       "total": 2,
