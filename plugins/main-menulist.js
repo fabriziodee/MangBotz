@@ -31,8 +31,6 @@ if (teks == 'all') tags = {
 'anime': 'Anime',
 'admin': 'Admin',
 'group': 'Group',
-'vote': 'Voting',
-'absen': 'Absen',
 'premium': 'Premium',
 'anonymous': 'Anonymous Chat',
 'internet': 'Internet',
