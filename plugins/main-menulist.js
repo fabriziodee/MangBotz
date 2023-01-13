@@ -5,35 +5,7 @@ import moment from 'moment-timezone'
 import os from 'os'
 import fs from 'fs'
 import fetch from 'node-fetch'
-/*
-%dash
 
-%m3
-
-%m1 *T O D A Y*
-%m2 *%ucpn*
-%m2 *Days:* %week %weton
-%m2 *Date:* %date
-%m2 *Islamic Date:* %dateIslamic
-%m2 *Time:* %wib
-%m3
-
-%m1 *I N F O*
-%m2 *Bot Name:* %me
-%m2 *Mode:* 
-%m2 *Platform:*
-%m2 *Type:* 
-%m2 *Baileys:* Multi Device
-%m2 *Prefix:* 
-%m2 *Uptime:*
-%m2 *Database:* 
-%m3
-
-%m1 *I N F O  C M D* 
-%m4 *Ⓟ* = Premium
-%m4 *Ⓛ* = Limit
-%m3
-*/
 const defaultMenu = {
 before: ` `.trimStart(),
 header: '⃟⃟☰⃟⃟ᭁ═━┈━┈༓ *%category* ',
