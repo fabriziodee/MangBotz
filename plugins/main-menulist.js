@@ -1,3 +1,4 @@
+let { generateWAMessageFromContent } = (await import("@adiwajshing/baileys"))
 import { promises } from 'fs'
 import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
@@ -5,6 +6,7 @@ import moment from 'moment-timezone'
 import os from 'os'
 import fs from 'fs'
 import fetch from 'node-fetch'
+
 const defaultMenu = {
 before: ` `.trimStart(),
 header: '⃟⃟☰⃟⃟ᭁ═━┈━┈༓ *%category* ',
@@ -13,8 +15,84 @@ footer: `⃟⃟⃟⃟࿑⃟⃟⃟࿐═┈༓᭄༤\n`,
 after: ` `,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
+
+ /**************************** TIME *********************/
+ 
+let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+let wibh = moment.tz('Asia/Jakarta').format('HH')
+let wibm = moment.tz('Asia/Jakarta').format('mm')
+let wibs = moment.tz('Asia/Jakarta').format('ss')
+let wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
+let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
+let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
+ 
+ let mode = global.opts['self'] ? 'Private' : 'Publik'
+let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
+let { age, exp, limit, level, role, registered, money} = global.db.data.users[m.sender]
+let { min, xp, max } = xpRange(level, global.multiplier)
+let name = await conn.getName(m.sender)
+let premium = global.db.data.users[m.sender].premiumTime
+let prems = `${premium > 0 ? 'Premium': 'Free'}`
+let platform = os.platform()
+      let vn = './media/yntkts'
+//-----------TIME---------
+let ucpn = `${ucapan()}`
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let d = new Date(new Date + 3600000)
+let locale = 'id'
+// d.getTimeZoneOffset()
+// Offset -420 is 18.00
+// Offset0 is0.00
+// Offset420 is7.00
+let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
+let week = d.toLocaleDateString(locale, { weekday: 'long' })
+let date = d.toLocaleDateString(locale, {
+day: 'numeric',
+month: 'long',
+year: 'numeric'
+})
+let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
+day: 'numeric',
+month: 'long',
+year: 'numeric'
+}).format(d)
+let time = d.toLocaleTimeString(locale, {
+hour: 'numeric',
+minute: 'numeric',
+second: 'numeric'
+})
+let _uptime = process.uptime() * 1000
+let _muptime
+if (process.send) {
+process.send('uptime')
+_muptime = await new Promise(resolve => {
+process.once('message', resolve)
+setTimeout(resolve, 1000)
+}) * 1000
+}
+let muptime = clockString(_muptime)
+let uptime = clockString(_uptime)
+
+//---------------------
+
+let totalreg = Object.keys(global.db.data.users).length
+let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
+return {
+help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
+tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
+prefix: 'customPrefix' in plugin,
+limit: plugin.limit,
+premium: plugin.premium,
+enabled: !plugin.disabled,
+}
+})
+
+let totalf = Object.values(global.plugins).filter(
+    (v) => v.help && v.tags
+  ).length
 let tags
-let emot = `${pickRandom(['⎔', '◈▻', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
+let emot = `⃟࿑⃟⃟⃟⟣⟜ ${pickRandom(['⎔', '◈▻', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
 let rndom = `${pickRandom(['defaultMenu', 'defmenu1'])}`
 let teks = `${args[0]}`.toLowerCase()
 let arrayMenu = ['all', 'anime', 'update', 'maker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database","quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
@@ -31,6 +109,8 @@ if (teks == 'all') tags = {
 'anime': 'Anime',
 'admin': 'Admin',
 'group': 'Group',
+'vote': 'Voting',
+'absen': 'Absen',
 'premium': 'Premium',
 'anonymous': 'Anonymous Chat',
 'internet': 'Internet',
@@ -175,157 +255,93 @@ setTimeout(resolve, 1000)
 }) * 1000
 }
 let mpt = clockString(_mpt)
-const sections = [{
-title: `${htki} MAIN ${htka}`,
+const sections = [
+{
+title: `⃟⟣⟚⟝ ⟡ List Menu ${namebot} ⟡ ⟞⟚⟢⃟`,
 rows: [
-{title: `⚡ ${emot} SPEED BOT`, rowId: ".speed", description: "Menampilkan kecepatan respon BOT"},
-{title: `💌 ${emot} OWNER BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
-{title: `📔 ${emot} Profile`, rowId: ".profile", description: "Profile Disini"},
+{title: `${emot} Rpg`, rowId: ".? rpg", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀᴍ Mᴇɴᴜ Rᴘɢ"},
+{title: `${emot} Exp`, rowId: ".? xp", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Exᴘ"},
+{title: `${emot} Game`, rowId: ".? game", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Gᴇᴍᴇ"},
+{title: `${emot} Fun`, rowId: ".? fun", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Fᴜɴ"},
+{title: `${emot} Kerang`, rowId: ".? kerangajaib", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Kᴇʀᴀɴɢ"},
+{title: `${emot} Quotes`, rowId: ".? quotes", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Qᴜᴏᴛᴇs"},
+{title: `${emot} Anime`, rowId: ".? anime", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aɴɪᴍᴇ"},
+{title: `${emot} Nsfw`, rowId: ".? nsfw", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Nsғᴡ"},
+{title: `${emot} Premium`, rowId: ".? premium", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Pʀᴇᴍɪᴜᴍ"},
+{title: `${emot} Anonymous Chats`, rowId: ".? anonymous", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Aɴᴏɴʏᴍᴏᴜs Cʜᴀᴛs"},
+{title: `${emot} Al-Quran`, rowId: ".? quran", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aʟ-Qᴜʀᴀɴ"},
+{title: `${emot} Internet`, rowId: ".? internet", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Iɴᴛᴇʀɴᴇᴛ"},
+{title: `${emot} Berita`, rowId: ".? berita", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Bᴇʀɪᴛᴀ"},
+{title: `${emot} Downloader`, rowId: ".? downloader", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Dᴏᴡɴʟᴏᴀᴅᴇʀ"},
+{title: `${emot} Stikers`, rowId: ".? stiker", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Sᴛɪᴋᴇʀ"},
+{title: `${emot} Nulis`, rowId: ".? nulis", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Nᴜʟɪs"},
+{title: `${emot} Audio`, rowId: ".? audio", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aᴜᴅɪᴏ"},
+{title: `${emot} Sound Menu`, rowId: ".soundmenu", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Sᴏᴜɴᴅ"},
+{title: `${emot} Group`, rowId: ".? group", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Gʀᴏᴜᴘ"},
+{title: `${emot} Admin`, rowId: ".? admin", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Aᴅᴍɪɴ"},
+{title: `${emot} Database`, rowId: ".? database", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Dᴀᴛᴀʙᴀsᴇ"},
+{title: `${emot} Tools`, rowId: ".? tools", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Tᴏᴏʟs"},
+{title: `${emot} Info`, rowId: ".? info", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Iɴғᴏ"},
+{title: `${emot} Owner`, rowId: ".? owner", description: "Mᴇɴᴀᴍᴘɪʟᴋᴀɴ Mᴇɴᴜ Oᴡɴᴇʀ"},
 ]
-},{
-title: `${htki} SUPPORT ${htka}`,
+}, {
+title: `⃟⟣⟚⟝ ⟡ Support Me ${namebot} ⟡ ⟞⟚⟢⃟`,
 rows: [
-{title: `🔖 ${emot} SEWA`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
-{title: `🌟 ${emot} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
-{title: `💹 ${emot} DONASI`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
-]
-},{
-title: `${htki} MENU ${htka}`,
-rows: [
-{title: `${emot} All`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
-{title: `${emot} Rpg`, rowId: ".? rpg", description: "Game Epic Rpg!"},
-{title: `${emot} Exp`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
-{title: `${emot} Game`, rowId: ".? game", description: "Gamenya seru seru lho >-<"},
-{title: `${emot} Fun`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
-{title: `${emot} Kerang`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
-{title: `${emot} Quotes`, rowId: ".? quotes", description: "Random Inspirasi"},
-{title: `${emot} Anime`, rowId: ".? anime", description: "Kamu wibu ya bang?"},
-{title: `${emot} Nsfw`, rowId: ".? nsfw", description: "Tch, dasar sagne"},
-{title: `${emot} Premium`, rowId: ".? premium", description: "Only premium Users"},
-{title: `${emot} Anonymous Chats`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
-{title: `${emot} Al-Quran`, rowId: ".? quran", description: "Tobat yuk kak"},
-{title: `${emot} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
-{title: `${emot} Berita`, rowId: ".? berita", description: "Cari berita terupdate"},
-{title: `${emot} Downloaders`, rowId: ".? downloader", description: "Download sesuatu diBOT"},
-{title: `${emot} Stikers`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
-{title: `${emot} Nulis`, rowId: ".? nulis", description: "Nulis kok males kak?"},
-{title: `${emot} Audio`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
-{title: `${emot} Sound Menu`, rowId: ".soundmenu", description: "Kumpulan 120 Sound"},
-{title: `${emot} Group`, rowId: ".? group", description: "Only Groups"},
-{title: `${emot} Admin`, rowId: ".? admin", description: "Only Admin Group"},
-{title: `${emot} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
-{title: `${emot} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
-{title: `${emot} Info`, rowId: ".? info", description: "Info info BOT"},
-{title: `${emot} Owner`, rowId: ".? owner", description: "Owner Only!"},
-{title: `\n${emot} No Category`, rowId: ".? nocategory", description: "Fitur tanpa kategory!"},
-] },
-]
+{title: `⟐ Donasi ⟐`, rowId: ".donasi", description: "Donasi Agar Saya Semangat Untuk Update Bot:)"},
+{title: `⟐ Sewa Bot ⟐`, rowId: ".sewa", description: "Mau Nyewa?"},
+{title: `⟐ Script ⟐`, rowId: ".sc", description: "Menampilkan Script Bot Ini"},
+]}]
 let psan = 'bagaimana kabarmu?'
 let usrs = db.data.users[m.sender]
 let fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg'), thumbnail: fs.readFileSync('./thumbnail.jpg'),sendEphemeral: true}}}
-let tek = `*${ucapan()} @${m.sender.split`@`[0]}*
-☰⃟⃟ᭁ═━┈━┈༓
-┯┩${psan}
-┡────────────┈ ⳹
-┠━☰⃟⃟ᭁ「 *U s e rI n f o 克* 」
-┋↬✗• *ɴᴀᴍᴇ:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
-║↬✗• *ᴛᴀɢs:* @${m.sender.split`@`[0]}
-╏↬✗• *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
-╎↬✗• *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
-╅╌┉┈┈╳
-╭╼╼╼╼╼╼╼╼╺╴╴╳
-┊ 「 *S t a t u sI n f o 比* 」
-┊⧠ *ᴜᴘᴛɪᴍᴇ:* ${mpt}
-┊⧠ *ᴛɪᴍᴇ:* ${moment.tz('Asia/Jakarta').format('HH')} H${moment.tz('Asia/Jakarta').format('mm')} M${moment.tz('Asia/Jakarta').format('ss')} S
-┊⧠ *ᴜsᴇʀs:* ${Object.keys(global.db.data.users).length}
-┊⧠ *ʟɪᴍɪᴛ:* ${usrs.limit}
-┊⧠ *ʟᴇᴠᴇʟ:* ${usrs.level}
-┊⧠ *ʀᴏʟᴇ:* ${usrs.role}${usrs.premiumTime > 1 ? `
-┗––––––––––––––––––✥
-┊↬✗• *ᴇxᴘɪʀᴇᴅ ᴘʀᴇᴍɪᴜᴍ:*
-${clockStringP(usrs.premiumTime - new Date())}` : ''}
+let tagnya = `@${m.sender.split`@`[0]}`
+
+let con = `┏━━━━━━━━━━━━━━━━━━━┓
+┆     List Menu ${namebot}
+┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛
+┏┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╼
+┆ Hᴀʟᴏ ${tagnya}
+┢╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╼
+┣╌ ⟪ *Yᴏᴜʀ Iɴғᴏ* ⟫
+┃▷ *Nᴀᴍᴇ* : ${usrs.registered ? usrs.name : conn.getName(m.sender)}
+┃▷ *Sᴛᴀᴛᴜs* : ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
+┃▷ *Pʀᴇᴍɪᴜᴍ* : ${usrs.premiumTime > 1 ? '✔ Ya': '✘ Tidak'}
+┃▷ *Rᴏʟᴇ* : ${usrs.role}
+┃▷ *Lɪᴍɪᴛ* : ${usrs.limit}
+┃▷ *Lᴇᴠᴇʟ* : ${usrs.limit}
+╰╴╴╴╳
+▎▍▌▋▊▍▋▍▌▌▌▋▍▎▎▍▍▎▎▎▎▍
+╭╴╴╼╳
+│◇ Aʟʟ Fɪᴛᴜʀ: ${totalf}
+╰╸╳`
+let hariRayaramadan = new Date('April 21, 2023 23:59:59') 
+     let sekarangg = new Date().getTime() 
+     let lebih = hariRayaramadan - sekarangg 
+     let harii = Math.floor( lebih / (1000 * 60 * 60 * 24)); 
+     let jamm = Math.floor( lebih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)) 
+     let menitt = Math.floor( lebih % (1000 * 60 * 60) / (1000 * 60)) 
+     let detikk = Math.floor( lebih % (1000 * 60) / 1000) 
+let tett = `▢ ▱▱▱ ▣► Dᴀᴛᴇ ◄▣ ▱▱▱ ▢ 
+▯▷ *Uᴘᴛɪᴍᴇ* : ${mpt}
+▯▷ *Tɪᴍᴇ* :  ${moment.tz('Asia/Jakarta').format('HH')} H${moment.tz('Asia/Jakarta').format('mm')} M${moment.tz('Asia/Jakarta').format('ss')} S
+▯▷ *Tᴀɴɢɢᴀʟ Isʟᴀᴍ* : ${dateIslamic}
+▢ ▱▱▱▱▱▱▱▱▱▱▱▱ ▢
+`
+let fot = `Nᴏᴛᴇ!! : Jɪᴋᴀ Aɴᴅᴀ Mᴇɴᴇᴍᴜᴋᴀɴ Bᴜɢ/Eʀʀᴏʀ 
+Bɪsᴀ Rᴇᴘᴏʀᴛ Dᴇɴɢᴀɴ Cᴀʀᴀ ▻ ketik #report 
 `
 const listMessage = {
-text: tek,
-footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
-mentions: await conn.parseMention(tek),
-title: `${htki} *LIST MENU* ${htka}`,
+text: tett,
+footer: fot,
+mentions: await conn.parseMention(con),
+title: con,
 buttonText: `CLICK HERE ⎙`, 
 sections
 }
 if (teks == '404') {
-return conn.sendMessage(m.chat, listMessage, { quoted: fkontak, mentions: await conn.parseMention(tek), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
+return conn.sendMessage(m.chat, listMessage, { quoted: fkontak, mentions: await conn.parseMention(con), contextInfo:{ forwardingScore: 99999, isForwarded: true }}) 
 }
 
- /**************************** TIME *********************/
- let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
-let wibh = moment.tz('Asia/Jakarta').format('HH')
-let wibm = moment.tz('Asia/Jakarta').format('mm')
-let wibs = moment.tz('Asia/Jakarta').format('ss')
-let wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
-let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
-let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
- 
- let mode = global.opts['self'] ? 'Private' : 'Publik'
-let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-let { age, exp, limit, level, role, registered, money} = global.db.data.users[m.sender]
-let { min, xp, max } = xpRange(level, global.multiplier)
-let name = await conn.getName(m.sender)
-let premium = global.db.data.users[m.sender].premiumTime
-let prems = `${premium > 0 ? 'Premium': 'Free'}`
-let platform = os.platform()
-      let vn = './media/yntkts'
-//-----------TIME---------
-let ucpn = `${ucapan()}`
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let d = new Date(new Date + 3600000)
-let locale = 'id'
-// d.getTimeZoneOffset()
-// Offset -420 is 18.00
-// Offset0 is0.00
-// Offset420 is7.00
-let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
-let week = d.toLocaleDateString(locale, { weekday: 'long' })
-let date = d.toLocaleDateString(locale, {
-day: 'numeric',
-month: 'long',
-year: 'numeric'
-})
-let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
-day: 'numeric',
-month: 'long',
-year: 'numeric'
-}).format(d)
-let time = d.toLocaleTimeString(locale, {
-hour: 'numeric',
-minute: 'numeric',
-second: 'numeric'
-})
-let _uptime = process.uptime() * 1000
-let _muptime
-if (process.send) {
-process.send('uptime')
-_muptime = await new Promise(resolve => {
-process.once('message', resolve)
-setTimeout(resolve, 1000)
-}) * 1000
-}
-let muptime = clockString(_muptime)
-let uptime = clockString(_uptime)
-//---------------------
-
-let totalreg = Object.keys(global.db.data.users).length
-let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
-let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
-return {
-help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
-tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
-prefix: 'customPrefix' in plugin,
-limit: plugin.limit,
-premium: plugin.premium,
-enabled: !plugin.disabled,
-}
-})
 let groups = {}
 for (let tag in tags) {
 groups[tag] = []
@@ -419,18 +435,53 @@ let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whats
 
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
 
-const _0xcdd4a4=_0x4f24;(function(_0x2bcefa,_0x4d88ce){const _0x5c4dba=_0x4f24,_0x205702=_0x2bcefa();while(!![]){try{const _0x33e7d8=-parseInt(_0x5c4dba(0x19c))/0x1+parseInt(_0x5c4dba(0x1a4))/0x2+-parseInt(_0x5c4dba(0x196))/0x3*(parseInt(_0x5c4dba(0x190))/0x4)+parseInt(_0x5c4dba(0x19e))/0x5+parseInt(_0x5c4dba(0x1a1))/0x6+-parseInt(_0x5c4dba(0x18f))/0x7+-parseInt(_0x5c4dba(0x18e))/0x8*(-parseInt(_0x5c4dba(0x19a))/0x9);if(_0x33e7d8===_0x4d88ce)break;else _0x205702['push'](_0x205702['shift']());}catch(_0xf8bf85){_0x205702['push'](_0x205702['shift']());}}}(_0x428b,0x217e1));function _0x4f24(_0xa43523,_0x129aaa){const _0x428b53=_0x428b();return _0x4f24=function(_0x4f24c5,_0x1efd25){_0x4f24c5=_0x4f24c5-0x188;let _0x40aa2e=_0x428b53[_0x4f24c5];return _0x40aa2e;},_0x4f24(_0xa43523,_0x129aaa);}let almenu=_0xcdd4a4(0x1a9)+global['namebot']+_0xcdd4a4(0x1ab)+mode+_0xcdd4a4(0x1aa)+platform+'\x0a┇┃\x20➯\x20*Tʏᴘᴇ:*\x20Node.Js\x0a┃║\x20➯\x20*Bᴀɪʟᴇʏs:*\x20Multi\x20Device\x0a┇┃\x20➯\x20*Pʀᴇғɪx:*\x20[\x20*'+_p+_0xcdd4a4(0x19f)+muptime+'\x0a┇┃\x20➯\x20*Dᴀᴛᴀʙᴀsᴇ:*\x20'+rtotalreg+_0xcdd4a4(0x1ad)+totalreg+_0xcdd4a4(0x18b)+name+_0xcdd4a4(0x19d)+tag+_0xcdd4a4(0x1a6)+prems+_0xcdd4a4(0x18c)+money+_0xcdd4a4(0x193)+limit+_0xcdd4a4(0x188)+level+_0xcdd4a4(0x1ae)+exp+_0xcdd4a4(0x1a5)+role+_0xcdd4a4(0x192)+readMore,nomorwa='0',nomorowm1=_0xcdd4a4(0x18d),d1=_0xcdd4a4(0x197),d2='application/vnd.openxmlformats-officedocument.wordprocessingml.document',d3='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',d4=_0xcdd4a4(0x199),d5=_0xcdd4a4(0x1a7),td=''+pickRandom([d1,d2,d3,d4,d5]),ᴛᴇs='Pᴏᴡᴇʀ\x20Bʏ\x20⬝\x20@'+nomorwa[_0xcdd4a4(0x1a8)]`@`[0x0]+_0xcdd4a4(0x189)+nomorown1[_0xcdd4a4(0x1a8)]`@`[0x0]+_0xcdd4a4(0x1a2)+week+'\x20'+date+_0xcdd4a4(0x1a3)+wktuwib,thummb=fs[_0xcdd4a4(0x18a)](_0xcdd4a4(0x195)),menuunya=_0xcdd4a4(0x194);function _0x428b(){const _0xbcaee4=['Oᴡɴᴇʀ','\x0a└──┈┈⟢\x0a','\x0a┆𝙻𝚒𝚖𝚒𝚝\x20:\x20','halo','./media/dash.jpg','90183FRcCVL','application/vnd.openxmlformats-officedocument.presentationml.presentation','\x0aHayo\x20Ngapain','application/pdf','315lplKwu','.owner','213337iqdLzF','\x0a┆Tᴀɢ\x20:\x20','700670GwRSVE','*\x20]\x0a┃║\x20➯\x20*Uᴘᴛɪᴍᴇ:*\x20','huuu','1041330sEhSga','\x0a⫹⫺\x20DATE:\x20','\x0a⫹⫺\x20𝗧𝗶𝗺𝗲:\x20','33032nQbsHg','\x0a┆𝚁𝚘𝚕𝚎\x20\x20\x20:\x20','\x0a┆Sᴛᴀᴛᴜs\x20:\x20','text/rtf','split','⃟☰⃟⃟ᭁ═━┈༓\x20❲\x20*Iɴғᴏ\x20Bᴏᴛ*\x20❳\x0a┃╔━─⟢⟨\x20','\x0a┃║\x20➯\x20*Pʟᴀᴛғᴏʀᴍ:*\x20','\x20⟩⟣\x0a┇┃\x20➯\x20*Oᴡɴᴇʀ:*\x20MangDTech\x0a┃║\x20➯\x20*Pʀᴏᴊᴇᴄᴛ:*\x202\x20November\x202022\x0a┇┃\x20➯\x20*Mᴏᴅᴇ:*\x20','send3ButtonLoc','\x20dari\x20','\x0a┆𝙴𝚡𝚙\x20\x20\x20:\x20','\x0a┆𝙻𝚎𝚟𝚎𝚕\x20:\x20','\x0aCʀᴇᴀᴛᴏʀ\x20Bᴏᴛ\x20⬝\x20@','readFileSync','\x0a┃❏\x0a┗┳━━◩\x0a┍┛\x0a┆➯📝Youtube\x20:\x20https://youtube.com/c/KomangComics\x0a└─┈⟅\x0a┍━─┈❏➢\x20*Pʀᴏғɪʟᴇ*\x0a┆𝙽𝚊𝚖𝚎\x20:\x20','\x0a┆Mᴏɴᴇʏ\x20:\x20','6285658019360','12272ASXMpa','23184uOucBR','4hHdPhr'];_0x428b=function(){return _0xbcaee4;};return _0x428b();}conn[_0xcdd4a4(0x1ac)](m['chat'],thummb,almenu,readMore+text+(''+ᴛᴇs)+readMore,'SᴇᴡᴀBᴏᴛ','.sewa',_0xcdd4a4(0x191),_0xcdd4a4(0x19b),_0xcdd4a4(0x198),_0xcdd4a4(0x1a0),m);
+//------------------ menuny
+let ownernya = `@${nomorown.split`@`[0]}`
+let almenu = `┏┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╼
+┆ Hᴀʟᴏ ${tagnya}
+┢╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╼
+┣╌ ⟪ *Yᴏᴜʀ Iɴғᴏ* ⟫
+┃▷ *Nᴀᴍᴇ* : ${usrs.registered ? usrs.name : conn.getName(m.sender)}
+┃▷ *Sᴛᴀᴛᴜs* : ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
+┃▷ *Pʀᴇᴍɪᴜᴍ* : ${usrs.premiumTime > 1 ? '✔ Ya': '✘ Tidak'}
+┃▷ *Rᴏʟᴇ* : ${usrs.role}
+┃▷ *Lɪᴍɪᴛ* : ${usrs.limit}
+┃▷ *Lᴇᴠᴇʟ* : ${usrs.limit}
+┃▷ *Mᴏɴᴇʏ* : ${money}
+╰╴╴╴╳
+▎▍▌▋▊▍▌▌▋▍▊▋▐▍▊▊▊▍▍
+╭╴╴╼ ▻ *INFO BOT* ◅ ╾╶ ╮
+│◇ Aʟʟ Fɪᴛᴜʀ: ${totalf}
+│◇ Oᴡɴᴇʀ: ${ownernya}
+│◇ Mᴏᴅᴇ: ${mode}
+│◇ Pʟᴀᴛғᴏʀᴍ: ${platform}
+│◇ Tʏᴘᴇ: Nodejs 
+│◇ Bᴀɪʟᴇʏs: Multi Device
+│◇ Pʀᴇғɪx: ${_p}
+│◇ Uᴘᴛɪᴍᴇ: ${mpt} 
+│◇ Dᴀᴛᴀʙᴀsᴇ: ${totalreg}
+╰╸╳`
+let nomorwa = '0'
+let nomorowm1 = '6285658019360'
+let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+let d2 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+let d3= 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+let d4 = 'application/pdf'
+let d5 = 'text/rtf'
+let td = `${pickRandom([d1,d2,d3,d4,d5])}`
+let ᴛᴇs = `Pᴏᴡᴇʀ Bʏ ⬝ @${nomorwa.split`@`[0]}\nCʀᴇᴀᴛᴏʀ Bᴏᴛ ⬝ @${nomorown1.split`@`[0]}\n⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
+let thummb = fs.readFileSync('./thumbnail.jpg')
 
+conn.send2ButtonDoc(m.chat, almenu, readMore + text + `${ᴛᴇs}` + readMore, 'SᴇᴡᴀBᴏᴛ', '.sewa', 'Oᴡɴᴇʀ', '.owner', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: 'Jᴏɪɴ Mʏ Gᴄ Oғғɪᴄɪᴀʟ'}}})
+   
 } catch (e) {
 conn.reply(m.chat, 'Maaf, menu sedang error', m)
 throw e
 }
 }
-handler.help = ['menu', 'help', '?']
-handler.tags = ['main']
 handler.command = /^(tesm|\?)$/i
 
-handler.register = true
+handler.register = false
 handler.exp = 3
 
 export default handler
