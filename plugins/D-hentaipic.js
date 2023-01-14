@@ -4,11 +4,11 @@ let handler = async (m, { conn, text }) => {
   if (!res.ok) throw await `${res.status} ${res.statusText}`;
   let json = await res.json();
   let url = json[Math.floor(Math.random() * json.length)]
-  await conn.sendButton(m.chat, await (await fetch(url)).buffer(), '©KBOT', 'Get Again', '/hentaipic', m)
+  await conn.sendButtonImg(m.chat, await (await fetch(url)).buffer(), '©KBOT', 'Get Again', '/hentaipic', m)
 }
-handler.command = /^(hentaipic)$/i
+handler.command = /^(hemtai)$/i
 handler.tags = ['nsfw']
-handler.help = ['hentaipic']
+handler.help = ['hemtai']
 handler.premium = true
 //handler.premium = false
 handler.group = false
