@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, text }) => {
-let res = await fetch('https://raw.githubusercontent.com/MangDTech/project-pictures/main/anal.json')
+let res = await fetch('https://raw.githubusercontent.com/MangDTech/project-resources/main/anal.json')
 if (!res.ok) throw await `${res.status} ${res.statusText}`;
 let json = await res.json();
 let url = json[Math.floor(Math.random() * json.length)]
