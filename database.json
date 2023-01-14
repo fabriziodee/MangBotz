@@ -1,7 +1,7 @@
 {
   "users": {
     "6285658019360@s.whatsapp.net": {
-      "exp": 8444,
+      "exp": 8732,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -151,7 +151,7 @@
       "roboxp": 0
     },
     "6283181132405@s.whatsapp.net": {
-      "exp": 439,
+      "exp": 453,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -977,7 +977,7 @@
       "roboxp": 0
     },
     "6283121930572@s.whatsapp.net": {
-      "exp": 68,
+      "exp": 331,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -1577,7 +1577,7 @@
       "roboxp": 0
     },
     "6283867367309@s.whatsapp.net": {
-      "exp": 354,
+      "exp": 362,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -2102,7 +2102,7 @@
       "roboxp": 0
     },
     "6282333506252@s.whatsapp.net": {
-      "exp": 76010,
+      "exp": 76018,
       "limit": 99,
       "lastclaim": 1667542072409,
       "registered": true,
@@ -3448,7 +3448,7 @@
       "roboxp": 0
     },
     "6289636078278@s.whatsapp.net": {
-      "exp": 76610,
+      "exp": 76618,
       "limit": 99,
       "lastclaim": 1667542052046,
       "registered": true,
@@ -4199,7 +4199,7 @@
       "roboxp": 0
     },
     "6281258611038@s.whatsapp.net": {
-      "exp": 110,
+      "exp": 111,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -5474,7 +5474,7 @@
       "roboxp": 0
     },
     "6289521092422@s.whatsapp.net": {
-      "exp": 54,
+      "exp": 64,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -5549,7 +5549,7 @@
       "roboxp": 0
     },
     "6282384788108@s.whatsapp.net": {
-      "exp": 184,
+      "exp": 185,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -9658,7 +9658,7 @@
       "roboxp": 0
     },
     "6282267120360@s.whatsapp.net": {
-      "exp": 15,
+      "exp": 16,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -11079,7 +11079,7 @@
       "roboxp": 0
     },
     "6285784104503@s.whatsapp.net": {
-      "exp": 74,
+      "exp": 83,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -11304,7 +11304,7 @@
       "roboxp": 0
     },
     "6285713886106@s.whatsapp.net": {
-      "exp": 39,
+      "exp": 43,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -23693,7 +23693,7 @@
       "limitjoin": 0
     },
     "6285712382471@s.whatsapp.net": {
-      "exp": 96020,
+      "exp": 96026,
       "limit": 99,
       "lastclaim": 1668491457333,
       "registered": true,
@@ -26925,7 +26925,7 @@
       "limitjoin": 0
     },
     "6283846686030@s.whatsapp.net": {
-      "exp": 8,
+      "exp": 10,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -27000,7 +27000,7 @@
       "roboxp": 0
     },
     "6281210830012@s.whatsapp.net": {
-      "exp": 81,
+      "exp": 140,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -30582,10 +30582,10 @@
       "lastSuccess": 1667446765930
     },
     "tes123.js": {
-      "total": 118,
-      "success": 118,
-      "last": 1673674670392,
-      "lastSuccess": 1673674670392
+      "total": 122,
+      "success": 122,
+      "last": 1673690607300,
+      "lastSuccess": 1673690607300
     },
     "downloader-facebook.js": {
       "total": 2,
@@ -30630,10 +30630,10 @@
       "lastSuccess": 1673622912811
     },
     "owner-getdb.js": {
-      "total": 23,
-      "success": 23,
-      "last": 1673673885653,
-      "lastSuccess": 1673673885653
+      "total": 24,
+      "success": 24,
+      "last": 1673685172381,
+      "lastSuccess": 1673685172381
     },
     "intro.js": {
       "total": 10,
@@ -30672,22 +30672,22 @@
       "lastSuccess": 1673509829156
     },
     "youtube-yta.js": {
-      "total": 34,
-      "success": 34,
-      "last": 1668492390122,
-      "lastSuccess": 1668492390122
+      "total": 35,
+      "success": 35,
+      "last": 1673689690984,
+      "lastSuccess": 1673689690984
     },
     "speed.js": {
-      "total": 25,
-      "success": 25,
-      "last": 1673622675815,
-      "lastSuccess": 1673622675815
+      "total": 27,
+      "success": 27,
+      "last": 1673689944068,
+      "lastSuccess": 1673689944068
     },
     "youtube-play.js": {
-      "total": 48,
-      "success": 46,
-      "last": 1673528899716,
-      "lastSuccess": 1673528899716
+      "total": 50,
+      "success": 48,
+      "last": 1673689673259,
+      "lastSuccess": 1673689673259
     },
     "donasi.js": {
       "total": 9,
@@ -30852,10 +30852,10 @@
       "lastSuccess": 1667997188654
     },
     "youtube-ytv.js": {
-      "total": 15,
-      "success": 12,
-      "last": 1668489692320,
-      "lastSuccess": 1668489692320
+      "total": 16,
+      "success": 13,
+      "last": 1673689832210,
+      "lastSuccess": 1673689832210
     },
     "internet-fetch.js": {
       "total": 2,
@@ -30936,9 +30936,9 @@
       "lastSuccess": 1667638619853
     },
     "youtube-yts.js": {
-      "total": 8,
+      "total": 9,
       "success": 8,
-      "last": 1668485847256,
+      "last": 1673689907194,
       "lastSuccess": 1668485847256
     },
     "lyrics.js": {
@@ -31344,10 +31344,10 @@
       "lastSuccess": 1668437251604
     },
     "owner-getsesi.js": {
-      "total": 17,
-      "success": 17,
-      "last": 1673673890258,
-      "lastSuccess": 1673673890258
+      "total": 18,
+      "success": 18,
+      "last": 1673685178040,
+      "lastSuccess": 1673685178040
     },
     "owner-banuser.js": {
       "total": 2,
@@ -31464,10 +31464,10 @@
       "lastSuccess": 1673673963758
     },
     "D-hentaipic.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1673675331151,
-      "lastSuccess": 1673675331151
+      "total": 4,
+      "success": 4,
+      "last": 1673685182349,
+      "lastSuccess": 1673685182349
     },
     "D-maid.js": {
       "total": 2,
