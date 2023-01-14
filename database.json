@@ -1,7 +1,7 @@
 {
   "users": {
     "6285658019360@s.whatsapp.net": {
-      "exp": 7554,
+      "exp": 8444,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -76,7 +76,7 @@
       "roboxp": 0
     },
     "6285776777438@s.whatsapp.net": {
-      "exp": 1008,
+      "exp": 1013,
       "limit": 97,
       "lastclaim": 0,
       "registered": true,
@@ -151,7 +151,7 @@
       "roboxp": 0
     },
     "6283181132405@s.whatsapp.net": {
-      "exp": 381,
+      "exp": 439,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -1577,7 +1577,7 @@
       "roboxp": 0
     },
     "6283867367309@s.whatsapp.net": {
-      "exp": 322,
+      "exp": 354,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -2627,7 +2627,7 @@
       "roboxp": 0
     },
     "6282386449117@s.whatsapp.net": {
-      "exp": 683,
+      "exp": 695,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -3974,7 +3974,7 @@
       "roboxp": 0
     },
     "6289623108330@s.whatsapp.net": {
-      "exp": 697,
+      "exp": 706,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -4424,7 +4424,7 @@
       "roboxp": 0
     },
     "6283802192342@s.whatsapp.net": {
-      "exp": 253,
+      "exp": 260,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -7491,7 +7491,7 @@
       "roboxp": 0
     },
     "6282233699075@s.whatsapp.net": {
-      "exp": 118,
+      "exp": 146,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -9133,7 +9133,7 @@
       "roboxp": 0
     },
     "6282152184988@s.whatsapp.net": {
-      "exp": 22,
+      "exp": 56,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -12579,7 +12579,7 @@
       "roboxp": 0
     },
     "6281266555221@s.whatsapp.net": {
-      "exp": 23,
+      "exp": 30,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -13471,7 +13471,7 @@
       "roboxp": 0
     },
     "6285721697770@s.whatsapp.net": {
-      "exp": 194,
+      "exp": 203,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -14959,7 +14959,7 @@
       "roboxp": 0
     },
     "628977928795@s.whatsapp.net": {
-      "exp": 57,
+      "exp": 77,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -16593,7 +16593,7 @@
       "roboxp": 0
     },
     "6285855071706@s.whatsapp.net": {
-      "exp": 97,
+      "exp": 108,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -19103,7 +19103,7 @@
       "roboxp": 0
     },
     "6283107853225@s.whatsapp.net": {
-      "exp": 1166,
+      "exp": 1276,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -19624,7 +19624,7 @@
       "roboxp": 0
     },
     "6281805598876@s.whatsapp.net": {
-      "exp": 55,
+      "exp": 62,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -21246,7 +21246,7 @@
       "roboxp": 0
     },
     "6285355300409@s.whatsapp.net": {
-      "exp": 4,
+      "exp": 10,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -21314,7 +21314,11 @@
       "note": 0,
       "premium": false,
       "premiumTime": 0,
-      "limitjoin": 0
+      "limitjoin": 0,
+      "petFood": 0,
+      "catexp": 0,
+      "robo": 0,
+      "roboxp": 0
     },
     "6288742745176@s.whatsapp.net": {
       "exp": 39,
@@ -22134,7 +22138,7 @@
       "roboxp": 0
     },
     "6285963067188@s.whatsapp.net": {
-      "exp": 34,
+      "exp": 39,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -26629,7 +26633,7 @@
       "roboxp": 0
     },
     "628996986699@s.whatsapp.net": {
-      "exp": 118,
+      "exp": 125,
       "limit": 98,
       "lastclaim": 0,
       "registered": false,
@@ -27292,8 +27296,8 @@
       "roboxp": 0
     },
     "6285159620499@s.whatsapp.net": {
-      "exp": 84,
-      "limit": 100,
+      "exp": 138,
+      "limit": 99,
       "lastclaim": 0,
       "registered": false,
       "name": "gigihprabowo1334",
@@ -27584,7 +27588,7 @@
       "limitjoin": 0
     },
     "6287859451276@s.whatsapp.net": {
-      "exp": 151,
+      "exp": 153,
       "limit": 100,
       "lastclaim": 0,
       "registered": true,
@@ -28401,7 +28405,7 @@
       "roboxp": 0
     },
     "6281228050590@s.whatsapp.net": {
-      "exp": 4,
+      "exp": 5,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -28469,7 +28473,11 @@
       "note": 0,
       "premium": false,
       "premiumTime": 0,
-      "limitjoin": 0
+      "limitjoin": 0,
+      "petFood": 0,
+      "catexp": 0,
+      "robo": 0,
+      "roboxp": 0
     },
     "6285230562046@s.whatsapp.net": {
       "exp": 5,
@@ -28982,6 +28990,77 @@
       "lastclaim": 0,
       "registered": false,
       "name": "ǝɯǝɯ uǝɹǝʞ",
+      "pasangan": "",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Beginner",
+      "autolevelup": true,
+      "money": 0,
+      "bank": 0,
+      "atm": 0,
+      "fullatm": 0,
+      "health": 100,
+      "potion": 10,
+      "trash": 0,
+      "wood": 0,
+      "rock": 0,
+      "string": 0,
+      "emerald": 0,
+      "diamond": 0,
+      "gold": 0,
+      "iron": 0,
+      "upgrader": 0,
+      "common": 0,
+      "uncommon": 0,
+      "mythic": 0,
+      "legendary": 0,
+      "superior": 0,
+      "pet": 0,
+      "horse": 0,
+      "horseexp": 0,
+      "cat": 0,
+      "catngexp": 0,
+      "fox": 0,
+      "foxexp": 0,
+      "dog": 0,
+      "dogexp": 0,
+      "horselastfeed": 0,
+      "catlastfeed": 0,
+      "foxlastfeed": 0,
+      "doglastfeed": 0,
+      "armor": 0,
+      "armordurability": 0,
+      "sword": 0,
+      "sworddurability": 0,
+      "pickaxe": 0,
+      "pickaxedurability": 0,
+      "fishingrod": 0,
+      "fishingroddurability": 0,
+      "lastadventure": 0,
+      "lastfishing": 0,
+      "lastdungeon": 0,
+      "lastduel": 0,
+      "lastmining": 0,
+      "lasthunt": 0,
+      "lastweekly": 0,
+      "lastmonthly": 0,
+      "lastbunga": 0,
+      "note": 0,
+      "premium": false,
+      "premiumTime": 0,
+      "limitjoin": 0
+    },
+    "6287775613003@s.whatsapp.net": {
+      "exp": 8,
+      "limit": 100,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "~yayang Novriyanti~",
       "pasangan": "",
       "age": -1,
       "regTime": -1,
@@ -30503,10 +30582,10 @@
       "lastSuccess": 1667446765930
     },
     "tes123.js": {
-      "total": 109,
-      "success": 109,
-      "last": 1673629148201,
-      "lastSuccess": 1673629148201
+      "total": 118,
+      "success": 118,
+      "last": 1673674670392,
+      "lastSuccess": 1673674670392
     },
     "downloader-facebook.js": {
       "total": 2,
@@ -30551,10 +30630,10 @@
       "lastSuccess": 1673622912811
     },
     "owner-getdb.js": {
-      "total": 22,
-      "success": 22,
-      "last": 1673629261547,
-      "lastSuccess": 1673629261547
+      "total": 23,
+      "success": 23,
+      "last": 1673673885653,
+      "lastSuccess": 1673673885653
     },
     "intro.js": {
       "total": 10,
@@ -30971,28 +31050,28 @@
       "lastSuccess": 1667794906142
     },
     "D-boobjob.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1667794386682,
-      "lastSuccess": 1667794386682
+      "total": 4,
+      "success": 4,
+      "last": 1673673927538,
+      "lastSuccess": 1673673927538
     },
     "D-creampie.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1667794422070,
-      "lastSuccess": 1667794422070
+      "total": 4,
+      "success": 4,
+      "last": 1673674530124,
+      "lastSuccess": 1673674530124
     },
     "D-cuckold.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1667794414095,
-      "lastSuccess": 1667794414095
+      "total": 3,
+      "success": 3,
+      "last": 1673674572721,
+      "lastSuccess": 1673674572721
     },
     "D-doujin.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1667794437948,
-      "lastSuccess": 1667794437948
+      "total": 3,
+      "success": 3,
+      "last": 1673674559905,
+      "lastSuccess": 1673674559905
     },
     "D-elves.js": {
       "total": 2,
@@ -31001,10 +31080,10 @@
       "lastSuccess": 1667794443241
     },
     "D-gifs.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1667794460182,
-      "lastSuccess": 1667794460182
+      "total": 3,
+      "success": 3,
+      "last": 1673674781301,
+      "lastSuccess": 1673674781301
     },
     "anime-megumin.js": {
       "total": 3,
@@ -31013,10 +31092,10 @@
       "lastSuccess": 1667795869531
     },
     "anime-waifu.js": {
-      "total": 6,
-      "success": 6,
-      "last": 1673577600301,
-      "lastSuccess": 1673577600301
+      "total": 8,
+      "success": 8,
+      "last": 1673673312751,
+      "lastSuccess": 1673673312751
     },
     "anime-fanart.js": {
       "total": 2,
@@ -31265,10 +31344,10 @@
       "lastSuccess": 1668437251604
     },
     "owner-getsesi.js": {
-      "total": 16,
-      "success": 16,
-      "last": 1673629265740,
-      "lastSuccess": 1673629265740
+      "total": 17,
+      "success": 17,
+      "last": 1673673890258,
+      "lastSuccess": 1673673890258
     },
     "owner-banuser.js": {
       "total": 2,
@@ -31377,6 +31456,120 @@
       "success": 2,
       "last": 1673622624199,
       "lastSuccess": 1673622624199
+    },
+    "D-thighs.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673673963758,
+      "lastSuccess": 1673673963758
+    },
+    "D-hentaipic.js": {
+      "total": 3,
+      "success": 3,
+      "last": 1673675331151,
+      "lastSuccess": 1673675331151
+    },
+    "D-maid.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673674862159,
+      "lastSuccess": 1673674862159
+    },
+    "D-masturbation.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673674867923,
+      "lastSuccess": 1673674867923
+    },
+    "D-milf.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673674896703,
+      "lastSuccess": 1673674896703
+    },
+    "D-nekonsfw.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673674906559,
+      "lastSuccess": 1673674906559
+    },
+    "D-nsfwwaifu.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673674946228,
+      "lastSuccess": 1673674946228
+    },
+    "D-ntr.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673674976386,
+      "lastSuccess": 1673674976386
+    },
+    "D-orgy.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673674995490,
+      "lastSuccess": 1673674995490
+    },
+    "D-panties.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673674998349,
+      "lastSuccess": 1673674998349
+    },
+    "D-pussy.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673675022602,
+      "lastSuccess": 1673675022602
+    },
+    "D-public.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673675047596,
+      "lastSuccess": 1673675047596
+    },
+    "D-school.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673675091689,
+      "lastSuccess": 1673675091689
+    },
+    "D-succubus.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673675096447,
+      "lastSuccess": 1673675096447
+    },
+    "D-tentacles.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673675127599,
+      "lastSuccess": 1673675127599
+    },
+    "D-uglybastard.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673675150803,
+      "lastSuccess": 1673675150803
+    },
+    "D-uniform.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673675177416,
+      "lastSuccess": 1673675177416
+    },
+    "D-vagina.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673675179977,
+      "lastSuccess": 1673675179977
+    },
+    "D-zettairyouiki.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1673675306534,
+      "lastSuccess": 1673675306534
     }
   },
   "msgs": {},
