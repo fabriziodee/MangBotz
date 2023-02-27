@@ -38,20 +38,20 @@ const readMore = more.repeat(4001)
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ NO OWNER ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.owner = [
-['6285658019360', 'MangDTech', true]
+['393518398856', 'fabri', true]
 ]
 global.mods = []
 global.prems = []
-global.nomorbot = '6289506631616'
-global.nomorown = '6285658019360'
-global.nomorown1 = '6285658019360'
+global.nomorbot = '393518398856'
+global.nomorown = '393518398856'
+global.nomorown1 = '393518398856'
 global.nomorwa = '0'
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ WM ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.readMore = readMore
-global.author = 'MangDTech'
+global.author = 'Fabri'
 global.namebot = '​MangBotz'
 global.wm = '©MangBotz By MangDTech'
 global.media = 'https://telegra.ph/file/8047b7dfc9cee4c4f98b5.jpg'
